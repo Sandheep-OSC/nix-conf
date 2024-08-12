@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [ <nixpkgs/nixos/modules/installer/virtualbox-demo.nix> ];
@@ -18,8 +18,13 @@
 # By default, the NixOS VirtualBox demo image includes SDDM and Plasma.
 # If you prefer another desktop manager or display manager, you may want
 # to disable the default.
-# services.xserver.desktopManager.plasma5.enable = lib.mkForce false;
+services.xserver.desktopManager.plasma5.enable = lib.mkForce false;
 # services.displayManager.sddm.enable = lib.mkForce false;
+
+services.xserver.enable = true;
+services.displayManager.sddm.enable = true;
+services.displayManager.sddm.wayland.enable = true;
+services.desktopManager.plasma6.enable = true;
 
 # Enable GDM/GNOME by uncommenting above two lines and two lines below.
 # services.xserver.displayManager.gdm.enable = true;
