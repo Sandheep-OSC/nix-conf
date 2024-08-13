@@ -31,13 +31,17 @@ services.desktopManager.plasma6.enable = true;
 # services.xserver.desktopManager.gnome.enable = true;
 
 # Set your time zone.
-# time.timeZone = "Europe/Amsterdam";
+time.timeZone = "Asia/Kolkata";
+users.defaultUserShell = pkgs.fish;
+environment.shells = with pkgs; [ fish zsh bash ];
+programs.fish.enable = true;
+
 
 # List packages installed in system profile. To search, run:
 # \$ nix search wget
-# environment.systemPackages = with pkgs; [
-#   wget vim
-# ];
+environment.systemPackages = with pkgs; [
+  starship
+];
 
 # Enable the OpenSSH daemon.
 # services.openssh.enable = true;

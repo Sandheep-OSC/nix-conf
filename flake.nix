@@ -22,7 +22,7 @@
         system = "x86_64-linux";
         modules = [
           # Import the previous configuratiiiiiion.nix we used,
-          # so the old configuration file still takes effect
+          # so the old cofiguration file still takes effect
           ./configuration.nix
         ];
         specialArgs = {

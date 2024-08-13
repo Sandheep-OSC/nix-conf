@@ -1,5 +1,5 @@
 ```bash
-git remote add origin git@github.com:Sandheep-OSC/nix-conf.git
+sudo nixos-rebuild switch --flake .#my-nixos --impure
 ```
 
 ```bash

@@ -25,9 +25,13 @@ in
 
     programs = {
       bash = {
-        enable = if customProp == "enableBash" then true else false;
+        # enable = if customProp == "enableBash" then true else false;
+	enable = false;
       };
       zsh = {
+        enable = false;
+      };
+      fish = {
         enable = true;
       };
     };

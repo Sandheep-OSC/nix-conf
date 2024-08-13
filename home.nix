@@ -3,7 +3,7 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  imports = [ ./sh.nix ];  
+  imports = [ ./sh.nix ./starship.nix ./wezterm.nix ./neovim.nix ./lvim.nix ./kitty.nix ./alacritty.nix ./bash_script.nix ];
 
   home.username = "demo";
   home.homeDirectory = "/home/demo";
@@ -18,6 +18,7 @@
       };
     };
   };
+
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
