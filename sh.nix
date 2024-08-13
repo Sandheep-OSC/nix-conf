@@ -6,7 +6,7 @@ let
 
   # Define packages based on custom variables
   myPackages = with pkgs; [
-    fzf git
+    fzf
   ] ++ (if customVariableTest == "test" then [ pkgs.brave ] else []);
 in
 {
@@ -35,7 +35,7 @@ in
     home = {
       packages = myPackages ++ (
         with pkgs-unstable; [
-          neovim
+          neovim git
         ]
       );
     };
