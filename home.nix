@@ -5,8 +5,8 @@
   # manage.
   imports = [ ./sh.nix ./starship.nix ./wezterm.nix ./neovim.nix ./lvim.nix ./kitty.nix ./alacritty.nix ./bash_script.nix ];
 
-  home.username = "demo";
-  home.homeDirectory = "/home/demo";
+  home.username = "sussan";
+  home.homeDirectory = "/home/sussan";
 
   programs = {
     git = {

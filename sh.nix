@@ -107,7 +107,31 @@ let
 
   # Define packages based on custom variables
   myPackages = with pkgs; [
-    fzf git
+    fzf
+    git
+    gcc
+    gnumake
+    binutils
+    pkg-config
+    cmake
+    kdePackages.filelight
+    python312
+    nodejs_20
+    cargo
+    rustc
+    vscode
+    zed-editor
+    unzip
+    xclip
+    lazygit
+    rust-analyzer
+    (pkgs.nerdfonts.override {
+      fonts = [
+        "IBMPlexMono"
+        "Iosevka"
+        "IosevkaTerm"
+      ];
+    })
   ] ++ (if customVariableTest == "test" then [ pkgs.brave ] else []);
 in
 {
@@ -148,9 +172,13 @@ in
     home = {
       packages = myPackages ++ (
         with pkgs-unstable; [
-          neovim
+          neovim mise google-chrome brave
         ]
       );
+
+      file = {
+      	".local/share/fonts".source = ./dotfiles/.local/share/fonts;
+      };
     };
   };
 }

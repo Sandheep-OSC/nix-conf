@@ -31,7 +31,7 @@
       };
     };
     homeConfigurations = {
-      demo = home-manager.lib.homeManagerConfiguration {
+      sussan = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           # Import the previous configuration.nix we used,
